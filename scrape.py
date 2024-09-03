@@ -8,6 +8,7 @@ def scrape_website(url: str) -> str:
     # Setup Chrome driver
     chrome_driver_path = "./chromedriver"
     options = webdriver.ChromeOptions()
+    options.add_argument("--headless")
     driver = webdriver.Chrome(service=Service(chrome_driver_path), options=options)
     # Open the website within the Chrome driver
     try:

@@ -2,6 +2,8 @@ import streamlit as st
 from scrape import scrape_website, extract_html_body, clean_html_body, split_html_text
 from parse import ollama_parse
 
+st.set_page_config(page_title="AI Scraper", page_icon=":llama:")
+
 st.title("AI Scraper")
 
 col1, col2 = st.columns([0.74, 0.16], vertical_alignment="bottom")
