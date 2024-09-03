@@ -87,10 +87,10 @@ example application, we use the model `llama3`):
 ollama pull llama3
 ```
 
->>> [!NOTE]
->>> Check the [Ollama GitHub](https://github.com/ollama/ollama "Ollama GitHub") 
->>> documentation for more information about the different models and there 
->>> requirements.
+> [!NOTE]
+> Check the [Ollama GitHub](https://github.com/ollama/ollama "Ollama GitHub") 
+> documentation for more information about the different models and there 
+> requirements.
 
 We're also able to run the model directly within our command window to interact 
 with the LLM by using the following command:
