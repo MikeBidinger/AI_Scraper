@@ -37,6 +37,17 @@ activate the environment:
 conda activate AI_Scraper
 ```
 
+## Dowload Chromedriver
+
+To be able to scrape a website we will use Selenium.
+This enables us to automate web browser interaction.
+First we have to download the driver from the 
+[Chromedriver download page](https://googlechromelabs.github.io/chrome-for-testing/ "Chromedriver download page").
+Be sure to select the appropriate "Stable" version.
+Also make sure your Chrome-browser is up-to-date to match the driver version.
+When downloaded, extract the ZIP folder and copy the Chromedriver and paste it 
+in the working directory.
+
 ## Install Ollama
 
 Ollama is a LLM that can be run locally and completely for free.

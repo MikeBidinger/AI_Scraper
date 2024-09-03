@@ -8,7 +8,7 @@ col1, col2 = st.columns([0.74, 0.16], vertical_alignment="bottom")
 with col1:
     url = st.text_input("Enter a Website URL: ")
 with col2:
-    st.link_button("Visit Website")
+    st.link_button("Visit Website", url)
 
 if st.button("Scrape Website"):
     # Insert a single-element container
