@@ -92,8 +92,8 @@ ollama pull llama3
 > documentation for more information about the different models and there 
 > requirements.
 
-We're also able to run the model directly within our command window to interact 
-with the LLM by using the following command:
+We're also able to run the model directly within our CLI (Command Line 
+Interface) to interact with the LLM by using the following command:
 
 ```console
 ollama run llama3
