@@ -1,6 +1,7 @@
 import selenium.webdriver as webdriver
 from selenium.webdriver.chrome.service import Service
 from bs4 import BeautifulSoup
+from parse import ollama_parse
 
 
 def scrape_website(url: str) -> str:
@@ -8,7 +9,7 @@ def scrape_website(url: str) -> str:
     # Setup Chrome driver
     chrome_driver_path = "./chromedriver"
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
+    # options.add_argument("--headless")
     driver = webdriver.Chrome(service=Service(chrome_driver_path), options=options)
     # Open the website within the Chrome driver
     try:
@@ -49,6 +50,26 @@ def split_html_text(html_text: str, max_len: int = 6000) -> str:
     return [html_text[i : i + max_len] for i in range(0, len(html_text), max_len)]
 
 
+def write_file(file_path: str, text: str) -> None:
+    with open(file_path, "w") as f:
+        f.write(text)
+
+
+def read_file(file_path: str) -> str:
+    with open(file_path, "r") as f:
+        result = f.read()
+    return result
+
+
 if __name__ == "__main__":
     url = "https://techwithtim.net"
-    print(scrape_website(url))
+    html = scrape_website(url)
+    write_file("content.html", html)
+
+    # html = read_file("html.html")
+    # html_body = extract_html_body(html)
+    # html_clean = clean_html_body(html_body)
+    # html_batches = split_html_text(html_clean)
+    # parse_desc = input("Enter the prompt to parse: ")
+    # result = ollama_parse(html_batches, parse_desc)
+    # print(result)
